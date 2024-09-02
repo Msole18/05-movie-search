@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 function ListOfMovies ({ movies }) {
     return (
       <ul className='movies'>
@@ -16,7 +18,7 @@ function ListOfMovies ({ movies }) {
   
 function NoMoviesResults () {
     return (
-      <p>No se encontraron películas para esta búsqueda</p>
+      <p>No movies were found for this search</p>
     )
 }
   
