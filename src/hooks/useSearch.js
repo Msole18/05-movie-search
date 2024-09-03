@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from 'react'
 
 export function useSearch() {
-  const [ search, updateSearch ] = useState('')
-  const [ error, setError ] = useState(null)
+  const [search, updateSearch] = useState('')
+  const [error, setError] = useState(null)
   const isFirstInput = useRef(true)
-  
+
   useEffect(() => {
     if (isFirstInput.current) {
       isFirstInput.current = search === ''
@@ -22,9 +22,9 @@ export function useSearch() {
       setError('Search must be at least 3 characters long ')
       return
     }
-    
+
     setError(null)
-  
+
   }, [search])
 
   return { search, updateSearch, error }
